@@ -4154,6 +4154,7 @@ var mainWindow = new BrowserWindow({
   title: "React + Tailwind + Vite",
   url,
   titleBarStyle: isMac ? "hiddenInset" : "default",
+  transparent: true,
   frame: {
     width: 900,
     height: 700,

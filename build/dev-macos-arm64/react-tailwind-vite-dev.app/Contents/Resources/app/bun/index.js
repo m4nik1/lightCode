@@ -4149,9 +4149,11 @@ async function getMainViewUrl() {
   return "views://mainview/index.html";
 }
 var url = await getMainViewUrl();
+var isMac = process.platform === "darwin";
 var mainWindow = new BrowserWindow({
   title: "React + Tailwind + Vite",
   url,
+  titleBarStyle: isMac ? "hiddenInset" : "default",
   frame: {
     width: 900,
     height: 700,

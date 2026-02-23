@@ -22,10 +22,13 @@ async function getMainViewUrl(): Promise<string> {
 
 // Create the main application window
 const url = await getMainViewUrl();
+const isMac = process.platform === "darwin";
 
 const mainWindow = new BrowserWindow({
 	title: "React + Tailwind + Vite",
 	url,
+	titleBarStyle: isMac ? "hiddenInset" : "default",
+	transparent: true,
 	frame: {
 		width: 900,
 		height: 700,

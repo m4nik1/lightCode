@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import Sidebar from "./components/Sidebar";
 import TopBar from "./components/TopBar";
 import { ProjectProvider } from "./components/ProjectProvider";
+import ChatSide from "./components/ChatSide";
 
 interface Project {
   projectName: string;
@@ -29,7 +30,7 @@ createRoot(document.getElementById("root")!).render(
       </div>
       <div className="flex min-h-screen flex-1 flex-col bg-zinc-950">
         <TopBar title={firstThreadTitle} projectName={firstProjectName} />
-        <div className="flex-1 bg-zinc-950" />
+        <ChatSide />
       </div>
     </div>
   </ProjectProvider>,
